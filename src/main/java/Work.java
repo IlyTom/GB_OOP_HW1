@@ -1,4 +1,6 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 class Product{
@@ -26,8 +28,10 @@ class Product{
         this.price=price;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Product {name = " + name +" price = "+price+"}";
+    }
 }
 class VendingMachine{
     private List<Product> products = new ArrayList<>();
@@ -44,6 +48,11 @@ class VendingMachine{
 }
 public class Work {
     public static void main(String[] args) {
-
+        VendingMachine vendingMachine = new VendingMachine();
+        List<Product> products = new ArrayList<>(Arrays.asList(new Product("Chocolate",50),
+                new Product("Pepsi",10),
+                new Product("Milk",8)));
+        vendingMachine.initProduct(products);
+        System.out.println(vendingMachine.getProduct("Chocolate").toString());
     }
 }
