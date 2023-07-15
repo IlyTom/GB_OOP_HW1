@@ -1,5 +1,5 @@
-abstract class VendingMachine {
-    abstract Product getProduct(String name);
+interface VendingMachine {
+     Product getProduct();
 
-    abstract Product getProduct(String name, Integer volume);
+
 }
