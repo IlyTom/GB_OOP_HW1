@@ -9,10 +9,10 @@ public class Work {
         //сделайте интерфейсом ТорговыйАвтомат и реализуйте класс какого-то одного типа
         //ТорговогоАвтомата (пример: ПродающийБутылкиВодыАвтомат)
         VendingMachineBottleWater vendingMachine = new VendingMachineBottleWater();
-        List<BottleWater> bottleWaters = new ArrayList<>(Arrays.asList(new BottleWater("Fanta",10),
-                new BottleWater("Pepsi",10),
-                new BottleWater("Cola",10)));
+        List<BottleWater> bottleWaters = new ArrayList<>(Arrays.asList(new BottleWater("Fanta",10,330),
+                new BottleWater("Pepsi",10,500),
+                new BottleWater("Cola",10,330)));
         vendingMachine.initProduct(bottleWaters);
-        System.out.println(vendingMachine.getProduct("Cola").toString());
+        System.out.println(vendingMachine.getProduct("").toString());
     }
 }
