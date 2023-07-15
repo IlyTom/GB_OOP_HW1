@@ -5,11 +5,14 @@ import java.util.List;
 
 public class Work {
     public static void main(String[] args) {
-        VendingMachine vendingMachine = new VendingMachine();
-        List<Product> products = new ArrayList<>(Arrays.asList(new Product("Chocolate",50),
-                new Product("Pepsi",10),
-                new Product("Milk",8)));
-        vendingMachine.initProduct(products);
-        System.out.println(vendingMachine.getProduct("Chocolate").toString());
+        //Сделайте класс Товар абстрактным, создайте нескольких наследников (к примеру: БутылкаВоды),
+        //сделайте интерфейсом ТорговыйАвтомат и реализуйте класс какого-то одного типа
+        //ТорговогоАвтомата (пример: ПродающийБутылкиВодыАвтомат)
+        VendingMachineBottleWater vendingMachine = new VendingMachineBottleWater();
+        List<BottleWater> bottleWaters = new ArrayList<>(Arrays.asList(new BottleWater("Fanta",10),
+                new BottleWater("Pepsi",10),
+                new BottleWater("Cola",10)));
+        vendingMachine.initProduct(bottleWaters);
+        System.out.println(vendingMachine.getProduct("Cola").toString());
     }
 }
